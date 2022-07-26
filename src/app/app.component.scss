@@ -1,0 +1,19 @@
+@mixin condicional($color) {
+    background-color: ($color);
+    @if $color == red {
+        border: 3px solid blue;
+    }@else if $color == green{
+        border: 3px solid purple;
+    }
+
+}
+.selected{
+    
+    @include condicional(red);
+    color:white;
+    padding: 5px;
+}
+.unSelected{
+    @include condicional(green);
+    padding: 5px;
+}
